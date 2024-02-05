@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white" >
+
+        <android.widget.EditText
+            android:id="@+id/ed_place"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/radius_20dp"
+            android:hint="名稱、地址搜尋"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:paddingStart="10dp"
+            android:paddingEnd="55dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.widget.Button
+            android:id="@+id/btn_delete"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/delete"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ed_place"
+            app:layout_constraintEnd_toEndOf="@id/ed_place"
+            app:layout_constraintTop_toTopOf="@+id/ed_place" />
+
+        <android.widget.Button
+            android:id="@+id/btn_search"
+            android:layout_width="65dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/radius_5dp"
+            android:text="搜尋"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/ed_place"
+            app:layout_constraintEnd_toStartOf="@+id/btn_history"
+            app:layout_constraintTop_toTopOf="@+id/ed_place" />
+
+        <android.widget.Button
+            android:id="@+id/btn_history"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="20dp"
+            android:text="搜尋紀錄"
+            android:textSize="16sp"
+            android:background="@drawable/radius_5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ed_place"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ed_place" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"/>
+
+</LinearLayout>

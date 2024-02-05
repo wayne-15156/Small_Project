@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SecTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize the color of the ActionBar -->
+        <item name="android:colorPrimary">#FFC0C0C0</item>
+        <!-- Customize the color of the title text -->
+        <item name="android:textColorPrimary">@color/black</item>
+    </style>
+</resources>
